@@ -1,0 +1,22 @@
+(version 1)
+
+# prueba_imu (08-11-2026). Reglas que las clases de red no expresan.
+
+# 1) Patas de las IMU: los pads de los LGA de 2,5 × 3 quedan a 0,15 mm unos de otros (0,20 en el ADXL375) y una pista
+#    de 0,4 mm (clase ALIM: GND, +3V3, VS_ADXL) no cabe entre ellos. Dentro del patio de cada IMU, la pista se estrecha
+#    a 0,2 mm: el router coge ese ancho al salir de la pata (valor «opt») y el DRC acepta desde 0,15 mm.
+(rule "imu_pistas_finas"
+	(condition "A.Type == 'Track' && (A.intersectsCourtyard('U2') || A.intersectsCourtyard('U3') || A.intersectsCourtyard('U4') || A.intersectsCourtyard('U5'))")
+	(constraint track_width (min 0.15mm) (opt 0.2mm)))
+
+# 3) Pasta de las IMU (TN0018 §3.3: abertura de la plantilla del 70–90 % del pad). −0,025 mm por lado deja el 79 % en
+#    los LGA de 2,5 × 3 (0,575 × 0,30 de 0,625 × 0,35) y el 87 % en el ADXL375 (0,55 × 0,90 de 0,60 × 0,95). Probado con
+#    kicad-cli el 08-11: solder_paste_rel_margin no se aplica al Gerber de pasta; solder_paste_abs_margin sí.
+(rule "pasta_imu"
+	(condition "A.Type == 'Pad' && (A.memberOfFootprint('U2') || A.memberOfFootprint('U3') || A.memberOfFootprint('U4') || A.memberOfFootprint('U5'))")
+	(constraint solder_paste_abs_margin (opt -0.025mm)))
+
+# 2) Pads SMD pequeños unidos a un relleno: basta un radio del alivio térmico (las patas vecinas tapan los demás).
+(rule "termico_un_radio"
+	(condition "A.Type == 'Pad' && A.Pad_Type == 'SMD'")
+	(constraint min_resolved_spokes 1))

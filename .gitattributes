@@ -1,0 +1,2 @@
+# Fabrication files are stored byte for byte as they were sent to the fab (no line-ending conversion)
+fabrication/** -text

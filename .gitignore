@@ -1,0 +1,17 @@
+# Claude Code local permissions: may contain approved commands with secrets
+.claude/settings.local.json
+
+# KiCad local history, backups, autosaves and locks
+.history/
+*-backups/
+_restore_backup_*/
+_autosave-*
+\#auto_saved_files\#
+*.lck
+~*.lck
+*.bak
+*-bak
+fp-info-cache
+
+# KiCad per-user view settings (visible layers, window layout...)
+*.kicad_prl

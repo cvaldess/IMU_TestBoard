@@ -1,0 +1,1147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2389" viewBox="0 0 1600 2389" font-family="Segoe UI, Arial, sans-serif">
+<defs><style>
+ .frame { fill:#fbfcfe; stroke:#90a4ae; stroke-width:1.3; }
+ .framep { fill:#fffaf0; stroke:#b7791f; stroke-width:1.5; stroke-dasharray:6 4; }
+ .ft { font-size:13.5px; font-weight:700; fill:#102a43; }
+ .sym { fill:#ffffff; stroke:#263238; stroke-width:1.6; }
+ .symp { fill:#fff4d6; stroke:#b7791f; stroke-width:1.6; stroke-dasharray:5 3; }
+ .w { stroke:#263238; stroke-width:1.5; fill:none; }
+ .thin { stroke:#90a4ae; stroke-width:1.2; fill:none; }
+ .pw { stroke:#c62828; stroke-width:2.4; fill:none; }
+ .sg { stroke:#1565c0; stroke-width:1.6; fill:none; }
+ .df { stroke:#6a1b9a; stroke-width:1.8; fill:none; }
+ .plate { stroke:#263238; stroke-width:2.4; fill:none; }
+ .nc { stroke:#c62828; stroke-width:1.8; }
+ .t { font-size:13px; fill:#212121; }
+ .ts { font-size:11.5px; fill:#455a64; }
+ .tp { font-size:11.5px; fill:#8a5a00; font-weight:600; }
+ .tw { font-size:11.5px; fill:#b71c1c; font-weight:600; }
+ .tb { font-size:13px; font-weight:700; fill:#102a43; }
+ .ref { font-size:11.5px; font-weight:700; fill:#102a43; }
+ .val { font-size:11px; fill:#37474f; }
+ .icref { font-size:13px; font-weight:700; fill:#102a43; }
+ .pn { font-size:10px; fill:#8d6e63; font-weight:600; }
+ .pname { font-size:11px; fill:#102a43; }
+ .lp { font-size:11.5px; fill:#c62828; font-weight:700; }
+ .lsb { font-size:11.5px; fill:#1565c0; font-weight:700; }
+ .lab_p { fill:#ffebee; stroke:#c62828; stroke-width:1.2; }
+ .lab_s { fill:#e3f2fd; stroke:#1565c0; stroke-width:1.2; }
+ .th { font-size:11.5px; font-weight:700; fill:#102a43; }
+ .td { font-size:11px; fill:#263238; }
+ .tdm { font-size:11px; fill:#263238; font-family:Consolas, monospace; }
+</style></defs>
+<rect width="1600" height="2389" fill="#ffffff"/>
+<text x="30" y="38" class="t" text-anchor="start" font-size="22" font-weight="700" fill="#102a43">IMU test board · ICM-45686, LSM6DSV320X, ASM330LHH and ADXL375 on one rigid PCB</text>
+<text x="30" y="58" class="ts" text-anchor="start" >AI MotoLogger · Rev 0 · 2026-11-08 · number next to a pin = chip pin number · net labels match the KiCad schematic · 0603 passives · all parts on the top side</text>
+<text x="30" y="72" class="ts" text-anchor="start" >Goal: choose the IMU for the main logger from bench tests and rides on a Yamaha YZ 125 test bike · are ±32 g enough? how hot does the board get? · hand-assembled with a stencil</text>
+<rect x="20" y="84" width="600" height="430" rx="7" class="frame"/>
+<text x="32" y="104" class="ft" text-anchor="start" >A · J1: 1×15 HEADER, 2.54 MM · DUPONT ON THE BENCH, CABLE ON THE BIKE</text>
+<rect x="80" y="154" width="56" height="326" rx="3" class="sym"/>
+<text x="108.0" y="132" class="icref" text-anchor="middle" >J1</text>
+<text x="108.0" y="146" class="val" text-anchor="middle" >1×15 header · 2.54 mm</text>
+<path d="M136,170 L158,170" class="pw"/>
+<text x="140" y="166" class="pn" text-anchor="start" >1</text>
+<text x="130" y="174" class="pname" text-anchor="end" >1</text>
+<rect x="158" y="161" width="56.400000000000006" height="18" rx="3" class="lab_p"/>
+<text x="186.2" y="174.5" class="lp" text-anchor="middle" >+5V_IN</text>
+<path d="M136,191 L158,191" class="w"/>
+<text x="140" y="187" class="pn" text-anchor="start" >2</text>
+<text x="130" y="195" class="pname" text-anchor="end" >2</text>
+<path d="M158,191 L158,198" class="w"/>
+<path d="M149,198 L167,198" class="w"/>
+<path d="M152,202 L164,202" class="w"/>
+<path d="M155,206 L161,206" class="w"/>
+<path d="M136,212 L158,212" class="sg"/>
+<text x="140" y="208" class="pn" text-anchor="start" >3</text>
+<text x="130" y="216" class="pname" text-anchor="end" >3</text>
+<rect x="158" y="203" width="34.2" height="18" rx="3" class="lab_s"/>
+<text x="175.1" y="216.5" class="lsb" text-anchor="middle" >SCK</text>
+<path d="M136,233 L158,233" class="w"/>
+<text x="140" y="229" class="pn" text-anchor="start" >4</text>
+<text x="130" y="237" class="pname" text-anchor="end" >4</text>
+<path d="M158,233 L158,240" class="w"/>
+<path d="M149,240 L167,240" class="w"/>
+<path d="M152,244 L164,244" class="w"/>
+<path d="M155,248 L161,248" class="w"/>
+<path d="M136,254 L158,254" class="sg"/>
+<text x="140" y="250" class="pn" text-anchor="start" >5</text>
+<text x="130" y="258" class="pname" text-anchor="end" >5</text>
+<rect x="158" y="245" width="41.6" height="18" rx="3" class="lab_s"/>
+<text x="178.8" y="258.5" class="lsb" text-anchor="middle" >MOSI</text>
+<path d="M136,275 L158,275" class="sg"/>
+<text x="140" y="271" class="pn" text-anchor="start" >6</text>
+<text x="130" y="279" class="pname" text-anchor="end" >6</text>
+<rect x="158" y="266" width="41.6" height="18" rx="3" class="lab_s"/>
+<text x="178.8" y="279.5" class="lsb" text-anchor="middle" >MISO</text>
+<path d="M136,296 L158,296" class="w"/>
+<text x="140" y="292" class="pn" text-anchor="start" >7</text>
+<text x="130" y="300" class="pname" text-anchor="end" >7</text>
+<path d="M158,296 L158,303" class="w"/>
+<path d="M149,303 L167,303" class="w"/>
+<path d="M152,307 L164,307" class="w"/>
+<path d="M155,311 L161,311" class="w"/>
+<path d="M136,317 L158,317" class="sg"/>
+<text x="140" y="313" class="pn" text-anchor="start" >8</text>
+<text x="130" y="321" class="pname" text-anchor="end" >8</text>
+<rect x="158" y="308" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="186.2" y="321.5" class="lsb" text-anchor="middle" >CS_ICM</text>
+<path d="M136,338 L158,338" class="sg"/>
+<text x="140" y="334" class="pn" text-anchor="start" >9</text>
+<text x="130" y="342" class="pname" text-anchor="end" >9</text>
+<rect x="158" y="329" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="186.2" y="342.5" class="lsb" text-anchor="middle" >CS_DSV</text>
+<path d="M136,359 L158,359" class="sg"/>
+<text x="140" y="355" class="pn" text-anchor="start" >10</text>
+<text x="130" y="363" class="pname" text-anchor="end" >10</text>
+<rect x="158" y="350" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="186.2" y="363.5" class="lsb" text-anchor="middle" >CS_ASM</text>
+<path d="M136,380 L158,380" class="sg"/>
+<text x="140" y="376" class="pn" text-anchor="start" >11</text>
+<text x="130" y="384" class="pname" text-anchor="end" >11</text>
+<rect x="158" y="371" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="189.9" y="384.5" class="lsb" text-anchor="middle" >CS_ADXL</text>
+<path d="M136,401 L158,401" class="sg"/>
+<text x="140" y="397" class="pn" text-anchor="start" >12</text>
+<text x="130" y="405" class="pname" text-anchor="end" >12</text>
+<rect x="158" y="392" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="189.9" y="405.5" class="lsb" text-anchor="middle" >INT_ICM</text>
+<path d="M136,422 L158,422" class="sg"/>
+<text x="140" y="418" class="pn" text-anchor="start" >13</text>
+<text x="130" y="426" class="pname" text-anchor="end" >13</text>
+<rect x="158" y="413" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="189.9" y="426.5" class="lsb" text-anchor="middle" >INT_DSV</text>
+<path d="M136,443 L158,443" class="sg"/>
+<text x="140" y="439" class="pn" text-anchor="start" >14</text>
+<text x="130" y="447" class="pname" text-anchor="end" >14</text>
+<rect x="158" y="434" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="189.9" y="447.5" class="lsb" text-anchor="middle" >INT_ASM</text>
+<path d="M136,464 L158,464" class="sg"/>
+<text x="140" y="460" class="pn" text-anchor="start" >15</text>
+<text x="130" y="468" class="pname" text-anchor="end" >15</text>
+<rect x="158" y="455" width="71.2" height="18" rx="3" class="lab_s"/>
+<text x="193.6" y="468.5" class="lsb" text-anchor="middle" >INT_ADXL</text>
+<text x="330" y="159" class="ts" text-anchor="start" >GND between SCK and MOSI, and after MISO:</text>
+<text x="330" y="176" class="ts" text-anchor="start" >each fast signal has its return next to it.</text>
+<text x="330" y="193" class="ts" text-anchor="start" ></text>
+<text x="330" y="210" class="ts" text-anchor="start" >Bench: male header and Dupont wires</text>
+<text x="330" y="227" class="ts" text-anchor="start" >to the Nucleo.</text>
+<text x="330" y="244" class="ts" text-anchor="start" ></text>
+<text x="330" y="261" class="ts" text-anchor="start" >Bike: no Dupont wires. A second board,</text>
+<text x="330" y="278" class="ts" text-anchor="start" >without the header: the cable is soldered</text>
+<text x="330" y="295" class="ts" text-anchor="start" >into the J1 holes and held by a cable tie</text>
+<text x="330" y="312" class="ts" text-anchor="start" >through two holes next to J1</text>
+<text x="330" y="329" class="ts" text-anchor="start" >(strain relief).</text>
+<rect x="635" y="84" width="945" height="430" rx="7" class="frame"/>
+<text x="647" y="104" class="ft" text-anchor="start" >B · POWER: 5 V FROM THE NUCLEO → FERRITE BEAD → DEDICATED 3.3 V LDO (THE IMUs DON'T SHARE THE MCU'S RAIL)</text>
+<rect x="643.6" y="155" width="56.400000000000006" height="18" rx="3" class="lab_p"/>
+<text x="671.8000000000001" y="168.5" class="lp" text-anchor="middle" >+5V_IN</text>
+<path d="M700,164 L752.0,164" class="pw"/>
+<path d="M778.0,164 L830,164" class="pw"/>
+<rect x="752.0" y="159" width="26" height="10" class="sym"/>
+<text x="765.0" y="155" class="ref" text-anchor="middle" >FB1 600 Ω @ 100 MHz</text>
+<rect x="830" y="155" width="34.2" height="18" rx="3" class="lab_p"/>
+<text x="847.1" y="168.5" class="lp" text-anchor="middle" >+5V</text>
+<rect x="660" y="215" width="34.2" height="18" rx="3" class="lab_p"/>
+<text x="677.1" y="228.5" class="lp" text-anchor="middle" >+5V</text>
+<path d="M694.2,224 L780.2,224" class="pw"/>
+<circle cx="716.2" cy="224" r="3.2" fill="#263238"/>
+<path d="M716.2,224 L716.2,236.0" class="w"/>
+<path d="M716.2,242.0 L716.2,254" class="w"/>
+<path d="M707.2,236.0 L725.2,236.0" class="plate"/>
+<path d="M707.2,242.0 L725.2,242.0" class="plate"/>
+<text x="728.2" y="237.0" class="ref" text-anchor="start" >C1</text>
+<text x="728.2" y="250.0" class="val" text-anchor="start" >10 µF</text>
+<path d="M716.2,254 L716.2,261" class="w"/>
+<path d="M707.2,261 L725.2,261" class="w"/>
+<path d="M710.2,265 L722.2,265" class="w"/>
+<path d="M713.2,269 L719.2,269" class="w"/>
+<text x="716.2" y="288" class="ts" text-anchor="middle" font-size="9.5">FB1</text>
+<path d="M780.2,224 L780.2,236.0" class="w"/>
+<path d="M780.2,242.0 L780.2,254" class="w"/>
+<path d="M771.2,236.0 L789.2,236.0" class="plate"/>
+<path d="M771.2,242.0 L789.2,242.0" class="plate"/>
+<text x="792.2" y="237.0" class="ref" text-anchor="start" >C2</text>
+<text x="792.2" y="250.0" class="val" text-anchor="start" >1 µF</text>
+<path d="M780.2,254 L780.2,261" class="w"/>
+<path d="M771.2,261 L789.2,261" class="w"/>
+<path d="M774.2,265 L786.2,265" class="w"/>
+<path d="M777.2,269 L783.2,269" class="w"/>
+<text x="780.2" y="288" class="ts" text-anchor="middle" font-size="9.5">U1.3</text>
+<rect x="1000" y="154" width="110" height="92" rx="3" class="sym"/>
+<text x="1055.0" y="132" class="icref" text-anchor="middle" >U1</text>
+<text x="1055.0" y="146" class="val" text-anchor="middle" >Torex XC6206P332MR · SOT-23</text>
+<path d="M978,180 L1000,180" class="pw"/>
+<text x="996" y="176" class="pn" text-anchor="end" >3</text>
+<text x="1006" y="184" class="pname" text-anchor="start" >VIN</text>
+<rect x="943.8" y="171" width="34.2" height="18" rx="3" class="lab_p"/>
+<text x="960.9" y="184.5" class="lp" text-anchor="middle" >+5V</text>
+<path d="M978,220 L1000,220" class="w"/>
+<text x="996" y="216" class="pn" text-anchor="end" >1</text>
+<text x="1006" y="224" class="pname" text-anchor="start" >VSS</text>
+<path d="M978,220 L978,227" class="w"/>
+<path d="M969,227 L987,227" class="w"/>
+<path d="M972,231 L984,231" class="w"/>
+<path d="M975,235 L981,235" class="w"/>
+<path d="M1110,180 L1132,180" class="pw"/>
+<text x="1114" y="176" class="pn" text-anchor="start" >2</text>
+<text x="1104" y="184" class="pname" text-anchor="end" >VOUT</text>
+<rect x="1132" y="171" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="1152.8" y="184.5" class="lp" text-anchor="middle" >+3V3</text>
+<rect x="1180" y="215" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="1200.8" y="228.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M1221.6,224 L1307.6,224" class="pw"/>
+<circle cx="1243.6" cy="224" r="3.2" fill="#263238"/>
+<path d="M1243.6,224 L1243.6,236.0" class="w"/>
+<path d="M1243.6,242.0 L1243.6,254" class="w"/>
+<path d="M1234.6,236.0 L1252.6,236.0" class="plate"/>
+<path d="M1234.6,242.0 L1252.6,242.0" class="plate"/>
+<text x="1255.6" y="237.0" class="ref" text-anchor="start" >C3</text>
+<text x="1255.6" y="250.0" class="val" text-anchor="start" >1 µF</text>
+<path d="M1243.6,254 L1243.6,261" class="w"/>
+<path d="M1234.6,261 L1252.6,261" class="w"/>
+<path d="M1237.6,265 L1249.6,265" class="w"/>
+<path d="M1240.6,269 L1246.6,269" class="w"/>
+<text x="1243.6" y="288" class="ts" text-anchor="middle" font-size="9.5">U1.2</text>
+<path d="M1307.6,224 L1307.6,236.0" class="w"/>
+<path d="M1307.6,242.0 L1307.6,254" class="w"/>
+<path d="M1298.6,236.0 L1316.6,236.0" class="plate"/>
+<path d="M1298.6,242.0 L1316.6,242.0" class="plate"/>
+<text x="1319.6" y="237.0" class="ref" text-anchor="start" >C4</text>
+<text x="1319.6" y="250.0" class="val" text-anchor="start" >10 µF</text>
+<path d="M1307.6,254 L1307.6,261" class="w"/>
+<path d="M1298.6,261 L1316.6,261" class="w"/>
+<path d="M1301.6,265 L1313.6,265" class="w"/>
+<path d="M1304.6,269 L1310.6,269" class="w"/>
+<text x="1307.6" y="288" class="ts" text-anchor="middle" font-size="9.5">U1.2</text>
+<text x="950" y="312" class="ts" text-anchor="start" >U1: 200 mA, input ≤ 6 V, stable with low-ESR</text>
+<text x="950" y="327" class="ts" text-anchor="start" >ceramic capacitors. The whole board draws &lt; 10 mA.</text>
+<rect x="679.2" y="320" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="700.0" y="333.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M700,338 L700,346" class="pw"/>
+<path d="M700,346 L700,357.0" class="w"/>
+<path d="M700,371.0 L700,382" class="w"/>
+<path d="M692,357.0 L708,357.0 L700,371.0 Z" class="sym"/>
+<path d="M692,371.0 L708,371.0" class="w"/>
+<path d="M710,361.0 L717,354.0" class="w"/>
+<path d="M713,354.0 L717,354.0 L717,358.0" class="w"/>
+<path d="M710,368.0 L717,361.0" class="w"/>
+<path d="M713,361.0 L717,361.0 L717,365.0" class="w"/>
+<text x="722" y="362.0" class="ref" text-anchor="start" >D1</text>
+<text x="722" y="375.0" class="val" text-anchor="start" >green LED</text>
+<path d="M700,382 L700,390" class="sg"/>
+<circle cx="700" cy="390" r="3.2" fill="#263238"/>
+<rect x="637.0" y="381" width="49.0" height="18" rx="3" class="lab_s"/>
+<text x="661.5" y="394.5" class="lsb" text-anchor="middle" >LED_K</text>
+<path d="M700,390 L700,397.0" class="w"/>
+<path d="M700,423.0 L700,430" class="w"/>
+<rect x="695" y="397.0" width="10" height="26" class="sym"/>
+<text x="709" y="408.0" class="ref" text-anchor="start" >R1</text>
+<text x="709" y="421.0" class="val" text-anchor="start" >470 Ω</text>
+<path d="M700,430 L700,437" class="w"/>
+<path d="M691,437 L709,437" class="w"/>
+<path d="M694,441 L706,441" class="w"/>
+<path d="M697,445 L703,445" class="w"/>
+<text x="810" y="414" class="ts" text-anchor="start" >D1: power LED, ~0.5–3 mA</text>
+<text x="810" y="429" class="ts" text-anchor="start" >depending on its Vf.</text>
+<circle cx="1290" cy="384" r="5" fill="#fff" stroke="#263238" stroke-width="1.6"/>
+<text x="1299" y="388" class="ref" text-anchor="start" >TP1 · +3V3</text>
+<circle cx="1290" cy="414" r="5" fill="#fff" stroke="#263238" stroke-width="1.6"/>
+<text x="1299" y="418" class="ref" text-anchor="start" >TP2 · GND</text>
+<circle cx="1290" cy="444" r="5" fill="#fff" stroke="#263238" stroke-width="1.6"/>
+<text x="1299" y="448" class="ref" text-anchor="start" >TP3 · FSYNC_ICM</text>
+<text x="1430" y="384" class="ts" text-anchor="start" >TP3: ICM pin 9</text>
+<text x="1430" y="399" class="ts" text-anchor="start" >(FSYNC/CLKIN), to test</text>
+<text x="1430" y="414" class="ts" text-anchor="start" >synchronisation later.</text>
+<rect x="20" y="529" width="1560" height="300" rx="7" class="frame"/>
+<text x="32" y="549" class="ft" text-anchor="start" >C · SHARED SPI BUS: ONE OR GATE IN FRONT OF EACH IMU's SDI · PULL-UP ON EVERY CS · 33 Ω ON MISO</text>
+<rect x="110" y="599" width="90" height="92" rx="3" class="sym"/>
+<text x="155.0" y="577" class="icref" text-anchor="middle" >U6</text>
+<text x="155.0" y="591" class="val" text-anchor="middle" >SN74LVC1G32DBVR · SOT-23-5</text>
+<path d="M88,619 L110,619" class="sg"/>
+<text x="106" y="615" class="pn" text-anchor="end" >1</text>
+<text x="116" y="623" class="pname" text-anchor="start" >A</text>
+<rect x="46.4" y="610" width="41.6" height="18" rx="3" class="lab_s"/>
+<text x="67.2" y="623.5" class="lsb" text-anchor="middle" >MOSI</text>
+<path d="M88,645 L110,645" class="sg"/>
+<text x="106" y="641" class="pn" text-anchor="end" >2</text>
+<text x="116" y="649" class="pname" text-anchor="start" >B</text>
+<rect x="31.599999999999994" y="636" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="59.8" y="649.5" class="lsb" text-anchor="middle" >CS_ICM</text>
+<path d="M88,671 L110,671" class="w"/>
+<text x="106" y="667" class="pn" text-anchor="end" >3</text>
+<text x="116" y="675" class="pname" text-anchor="start" >GND</text>
+<path d="M88,671 L88,678" class="w"/>
+<path d="M79,678 L97,678" class="w"/>
+<path d="M82,682 L94,682" class="w"/>
+<path d="M85,686 L91,686" class="w"/>
+<path d="M200,619 L222,619" class="sg"/>
+<text x="204" y="615" class="pn" text-anchor="start" >4</text>
+<text x="194" y="623" class="pname" text-anchor="end" >Y</text>
+<rect x="222" y="610" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="253.9" y="623.5" class="lsb" text-anchor="middle" >SDI_ICM</text>
+<path d="M200,645 L222,645" class="pw"/>
+<text x="204" y="641" class="pn" text-anchor="start" >5</text>
+<text x="194" y="649" class="pname" text-anchor="end" >VCC</text>
+<rect x="222" y="636" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="242.8" y="649.5" class="lp" text-anchor="middle" >+3V3</text>
+<rect x="60" y="700" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="80.8" y="713.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M101.6,709 L123.6,709" class="pw"/>
+<path d="M123.6,709 L123.6,721.0" class="w"/>
+<path d="M123.6,727.0 L123.6,739" class="w"/>
+<path d="M114.6,721.0 L132.6,721.0" class="plate"/>
+<path d="M114.6,727.0 L132.6,727.0" class="plate"/>
+<text x="135.6" y="722.0" class="ref" text-anchor="start" >C14</text>
+<text x="135.6" y="735.0" class="val" text-anchor="start" >100 nF</text>
+<path d="M123.6,739 L123.6,746" class="w"/>
+<path d="M114.6,746 L132.6,746" class="w"/>
+<path d="M117.6,750 L129.6,750" class="w"/>
+<path d="M120.6,754 L126.6,754" class="w"/>
+<text x="123.6" y="773" class="ts" text-anchor="middle" font-size="9.5">U6.5</text>
+<rect x="410" y="599" width="90" height="92" rx="3" class="sym"/>
+<text x="455.0" y="577" class="icref" text-anchor="middle" >U7</text>
+<text x="455.0" y="591" class="val" text-anchor="middle" >SN74LVC1G32DBVR · SOT-23-5</text>
+<path d="M388,619 L410,619" class="sg"/>
+<text x="406" y="615" class="pn" text-anchor="end" >1</text>
+<text x="416" y="623" class="pname" text-anchor="start" >A</text>
+<rect x="346.4" y="610" width="41.6" height="18" rx="3" class="lab_s"/>
+<text x="367.2" y="623.5" class="lsb" text-anchor="middle" >MOSI</text>
+<path d="M388,645 L410,645" class="sg"/>
+<text x="406" y="641" class="pn" text-anchor="end" >2</text>
+<text x="416" y="649" class="pname" text-anchor="start" >B</text>
+<rect x="331.6" y="636" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="359.8" y="649.5" class="lsb" text-anchor="middle" >CS_DSV</text>
+<path d="M388,671 L410,671" class="w"/>
+<text x="406" y="667" class="pn" text-anchor="end" >3</text>
+<text x="416" y="675" class="pname" text-anchor="start" >GND</text>
+<path d="M388,671 L388,678" class="w"/>
+<path d="M379,678 L397,678" class="w"/>
+<path d="M382,682 L394,682" class="w"/>
+<path d="M385,686 L391,686" class="w"/>
+<path d="M500,619 L522,619" class="sg"/>
+<text x="504" y="615" class="pn" text-anchor="start" >4</text>
+<text x="494" y="623" class="pname" text-anchor="end" >Y</text>
+<rect x="522" y="610" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="553.9" y="623.5" class="lsb" text-anchor="middle" >SDI_DSV</text>
+<path d="M500,645 L522,645" class="pw"/>
+<text x="504" y="641" class="pn" text-anchor="start" >5</text>
+<text x="494" y="649" class="pname" text-anchor="end" >VCC</text>
+<rect x="522" y="636" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="542.8" y="649.5" class="lp" text-anchor="middle" >+3V3</text>
+<rect x="360" y="700" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="380.8" y="713.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M401.6,709 L423.6,709" class="pw"/>
+<path d="M423.6,709 L423.6,721.0" class="w"/>
+<path d="M423.6,727.0 L423.6,739" class="w"/>
+<path d="M414.6,721.0 L432.6,721.0" class="plate"/>
+<path d="M414.6,727.0 L432.6,727.0" class="plate"/>
+<text x="435.6" y="722.0" class="ref" text-anchor="start" >C15</text>
+<text x="435.6" y="735.0" class="val" text-anchor="start" >100 nF</text>
+<path d="M423.6,739 L423.6,746" class="w"/>
+<path d="M414.6,746 L432.6,746" class="w"/>
+<path d="M417.6,750 L429.6,750" class="w"/>
+<path d="M420.6,754 L426.6,754" class="w"/>
+<text x="423.6" y="773" class="ts" text-anchor="middle" font-size="9.5">U7.5</text>
+<rect x="710" y="599" width="90" height="92" rx="3" class="sym"/>
+<text x="755.0" y="577" class="icref" text-anchor="middle" >U8</text>
+<text x="755.0" y="591" class="val" text-anchor="middle" >SN74LVC1G32DBVR · SOT-23-5</text>
+<path d="M688,619 L710,619" class="sg"/>
+<text x="706" y="615" class="pn" text-anchor="end" >1</text>
+<text x="716" y="623" class="pname" text-anchor="start" >A</text>
+<rect x="646.4" y="610" width="41.6" height="18" rx="3" class="lab_s"/>
+<text x="667.1999999999999" y="623.5" class="lsb" text-anchor="middle" >MOSI</text>
+<path d="M688,645 L710,645" class="sg"/>
+<text x="706" y="641" class="pn" text-anchor="end" >2</text>
+<text x="716" y="649" class="pname" text-anchor="start" >B</text>
+<rect x="631.6" y="636" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="659.8000000000001" y="649.5" class="lsb" text-anchor="middle" >CS_ASM</text>
+<path d="M688,671 L710,671" class="w"/>
+<text x="706" y="667" class="pn" text-anchor="end" >3</text>
+<text x="716" y="675" class="pname" text-anchor="start" >GND</text>
+<path d="M688,671 L688,678" class="w"/>
+<path d="M679,678 L697,678" class="w"/>
+<path d="M682,682 L694,682" class="w"/>
+<path d="M685,686 L691,686" class="w"/>
+<path d="M800,619 L822,619" class="sg"/>
+<text x="804" y="615" class="pn" text-anchor="start" >4</text>
+<text x="794" y="623" class="pname" text-anchor="end" >Y</text>
+<rect x="822" y="610" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="853.9" y="623.5" class="lsb" text-anchor="middle" >SDI_ASM</text>
+<path d="M800,645 L822,645" class="pw"/>
+<text x="804" y="641" class="pn" text-anchor="start" >5</text>
+<text x="794" y="649" class="pname" text-anchor="end" >VCC</text>
+<rect x="822" y="636" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="842.8" y="649.5" class="lp" text-anchor="middle" >+3V3</text>
+<rect x="660" y="700" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="680.8" y="713.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M701.6,709 L723.6,709" class="pw"/>
+<path d="M723.6,709 L723.6,721.0" class="w"/>
+<path d="M723.6,727.0 L723.6,739" class="w"/>
+<path d="M714.6,721.0 L732.6,721.0" class="plate"/>
+<path d="M714.6,727.0 L732.6,727.0" class="plate"/>
+<text x="735.6" y="722.0" class="ref" text-anchor="start" >C16</text>
+<text x="735.6" y="735.0" class="val" text-anchor="start" >100 nF</text>
+<path d="M723.6,739 L723.6,746" class="w"/>
+<path d="M714.6,746 L732.6,746" class="w"/>
+<path d="M717.6,750 L729.6,750" class="w"/>
+<path d="M720.6,754 L726.6,754" class="w"/>
+<text x="723.6" y="773" class="ts" text-anchor="middle" font-size="9.5">U8.5</text>
+<rect x="1010" y="599" width="90" height="92" rx="3" class="sym"/>
+<text x="1055.0" y="577" class="icref" text-anchor="middle" >U9</text>
+<text x="1055.0" y="591" class="val" text-anchor="middle" >SN74LVC1G32DBVR · SOT-23-5</text>
+<path d="M988,619 L1010,619" class="sg"/>
+<text x="1006" y="615" class="pn" text-anchor="end" >1</text>
+<text x="1016" y="623" class="pname" text-anchor="start" >A</text>
+<rect x="946.4" y="610" width="41.6" height="18" rx="3" class="lab_s"/>
+<text x="967.1999999999999" y="623.5" class="lsb" text-anchor="middle" >MOSI</text>
+<path d="M988,645 L1010,645" class="sg"/>
+<text x="1006" y="641" class="pn" text-anchor="end" >2</text>
+<text x="1016" y="649" class="pname" text-anchor="start" >B</text>
+<rect x="924.2" y="636" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="956.1" y="649.5" class="lsb" text-anchor="middle" >CS_ADXL</text>
+<path d="M988,671 L1010,671" class="w"/>
+<text x="1006" y="667" class="pn" text-anchor="end" >3</text>
+<text x="1016" y="675" class="pname" text-anchor="start" >GND</text>
+<path d="M988,671 L988,678" class="w"/>
+<path d="M979,678 L997,678" class="w"/>
+<path d="M982,682 L994,682" class="w"/>
+<path d="M985,686 L991,686" class="w"/>
+<path d="M1100,619 L1122,619" class="sg"/>
+<text x="1104" y="615" class="pn" text-anchor="start" >4</text>
+<text x="1094" y="623" class="pname" text-anchor="end" >Y</text>
+<rect x="1122" y="610" width="71.2" height="18" rx="3" class="lab_s"/>
+<text x="1157.6" y="623.5" class="lsb" text-anchor="middle" >SDI_ADXL</text>
+<path d="M1100,645 L1122,645" class="pw"/>
+<text x="1104" y="641" class="pn" text-anchor="start" >5</text>
+<text x="1094" y="649" class="pname" text-anchor="end" >VCC</text>
+<rect x="1122" y="636" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="1142.8" y="649.5" class="lp" text-anchor="middle" >+3V3</text>
+<rect x="960" y="700" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="980.8" y="713.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M1001.6,709 L1023.6,709" class="pw"/>
+<path d="M1023.6,709 L1023.6,721.0" class="w"/>
+<path d="M1023.6,727.0 L1023.6,739" class="w"/>
+<path d="M1014.6,721.0 L1032.6,721.0" class="plate"/>
+<path d="M1014.6,727.0 L1032.6,727.0" class="plate"/>
+<text x="1035.6" y="722.0" class="ref" text-anchor="start" >C17</text>
+<text x="1035.6" y="735.0" class="val" text-anchor="start" >100 nF</text>
+<path d="M1023.6,739 L1023.6,746" class="w"/>
+<path d="M1014.6,746 L1032.6,746" class="w"/>
+<path d="M1017.6,750 L1029.6,750" class="w"/>
+<path d="M1020.6,754 L1026.6,754" class="w"/>
+<text x="1023.6" y="773" class="ts" text-anchor="middle" font-size="9.5">U9.5</text>
+<rect x="1330" y="599" width="60" height="108" rx="3" class="sym"/>
+<text x="1360.0" y="577" class="icref" text-anchor="middle" >RN1</text>
+<text x="1360.0" y="591" class="val" text-anchor="middle" >YC164 · 4 × 10 kΩ</text>
+<path d="M1308,617 L1330,617" class="sg"/>
+<text x="1326" y="613" class="pn" text-anchor="end" >1</text>
+<text x="1336" y="621" class="pname" text-anchor="start" >1</text>
+<rect x="1251.6" y="608" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="1279.8" y="621.5" class="lsb" text-anchor="middle" >CS_ICM</text>
+<path d="M1308,641 L1330,641" class="sg"/>
+<text x="1326" y="637" class="pn" text-anchor="end" >2</text>
+<text x="1336" y="645" class="pname" text-anchor="start" >2</text>
+<rect x="1251.6" y="632" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="1279.8" y="645.5" class="lsb" text-anchor="middle" >CS_DSV</text>
+<path d="M1308,665 L1330,665" class="sg"/>
+<text x="1326" y="661" class="pn" text-anchor="end" >3</text>
+<text x="1336" y="669" class="pname" text-anchor="start" >3</text>
+<rect x="1251.6" y="656" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="1279.8" y="669.5" class="lsb" text-anchor="middle" >CS_ASM</text>
+<path d="M1308,689 L1330,689" class="sg"/>
+<text x="1326" y="685" class="pn" text-anchor="end" >4</text>
+<text x="1336" y="693" class="pname" text-anchor="start" >4</text>
+<rect x="1244.2" y="680" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="1276.1000000000001" y="693.5" class="lsb" text-anchor="middle" >CS_ADXL</text>
+<path d="M1390,617 L1412,617" class="pw"/>
+<text x="1394" y="613" class="pn" text-anchor="start" >8</text>
+<text x="1384" y="621" class="pname" text-anchor="end" >8</text>
+<rect x="1412" y="608" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="1432.8" y="621.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M1390,641 L1412,641" class="pw"/>
+<text x="1394" y="637" class="pn" text-anchor="start" >7</text>
+<text x="1384" y="645" class="pname" text-anchor="end" >7</text>
+<rect x="1412" y="632" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="1432.8" y="645.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M1390,665 L1412,665" class="pw"/>
+<text x="1394" y="661" class="pn" text-anchor="start" >6</text>
+<text x="1384" y="669" class="pname" text-anchor="end" >6</text>
+<rect x="1412" y="656" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="1432.8" y="669.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M1390,689 L1412,689" class="pw"/>
+<text x="1394" y="685" class="pn" text-anchor="start" >5</text>
+<text x="1384" y="693" class="pname" text-anchor="end" >5</text>
+<rect x="1412" y="680" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="1432.8" y="693.5" class="lp" text-anchor="middle" >+3V3</text>
+<rect x="1243.6" y="750" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="1271.8" y="763.5" class="lsb" text-anchor="middle" >MISO_B</text>
+<path d="M1300,759 L1332.0,759" class="sg"/>
+<path d="M1358.0,759 L1390,759" class="sg"/>
+<rect x="1332.0" y="754" width="26" height="10" class="sym"/>
+<text x="1345.0" y="750" class="ref" text-anchor="middle" >R2 33 Ω</text>
+<rect x="1390" y="750" width="41.6" height="18" rx="3" class="lab_s"/>
+<text x="1410.8" y="763.5" class="lsb" text-anchor="middle" >MISO</text>
+<text x="40" y="804" class="ts" text-anchor="start" >Y = MOSI OR CS: while its CS is high, an IMU's SDI stays at 1, so traffic meant for another IMU can't look like an I²C start to it (ADXL375 Rev. B, Fig. 24 and</text>
+<text x="40" y="819" class="ts" text-anchor="start" >“Preventing Bus Traffic Errors”). The ADXL375 can't turn off its I²C interface, and the ICM-45686 datasheet doesn't say how. The ST parts can (IF_CFG / CTRL4_C): firmware does it too.</text>
+<rect x="20" y="844" width="1560" height="370" rx="7" class="frame"/>
+<text x="32" y="864" class="ft" text-anchor="start" >D · THE FOUR IMUs: DECOUPLING AS EACH DATASHEET ASKS, RIGHT AT THE PIN</text>
+<rect x="150" y="914" width="112" height="168" rx="3" class="sym"/>
+<text x="206.0" y="892" class="icref" text-anchor="middle" >U2</text>
+<text x="206.0" y="906" class="val" text-anchor="middle" >ICM-45686 · LGA-14 2.5 × 3</text>
+<path d="M128,932 L150,932" class="sg"/>
+<text x="146" y="928" class="pn" text-anchor="end" >13</text>
+<text x="156" y="936" class="pname" text-anchor="start" >AP_SCLK</text>
+<rect x="93.8" y="923" width="34.2" height="18" rx="3" class="lab_s"/>
+<text x="110.9" y="936.5" class="lsb" text-anchor="middle" >SCK</text>
+<path d="M128,954 L150,954" class="sg"/>
+<text x="146" y="950" class="pn" text-anchor="end" >14</text>
+<text x="156" y="958" class="pname" text-anchor="start" >AP_SDI</text>
+<rect x="64.19999999999999" y="945" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="96.1" y="958.5" class="lsb" text-anchor="middle" >SDI_ICM</text>
+<path d="M128,976 L150,976" class="sg"/>
+<text x="146" y="972" class="pn" text-anchor="end" >12</text>
+<text x="156" y="980" class="pname" text-anchor="start" >AP_CS</text>
+<rect x="71.6" y="967" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="99.8" y="980.5" class="lsb" text-anchor="middle" >CS_ICM</text>
+<path d="M128,998 L150,998" class="sg"/>
+<text x="146" y="994" class="pn" text-anchor="end" >1</text>
+<text x="156" y="1002" class="pname" text-anchor="start" >AP_SDO</text>
+<rect x="71.6" y="989" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="99.8" y="1002.5" class="lsb" text-anchor="middle" >MISO_B</text>
+<path d="M128,1020 L150,1020" class="sg"/>
+<text x="146" y="1016" class="pn" text-anchor="end" >4</text>
+<text x="156" y="1024" class="pname" text-anchor="start" >INT1</text>
+<rect x="64.19999999999999" y="1011" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="96.1" y="1024.5" class="lsb" text-anchor="middle" >INT_ICM</text>
+<path d="M128,1042 L150,1042" class="sg"/>
+<text x="146" y="1038" class="pn" text-anchor="end" >9</text>
+<text x="156" y="1046" class="pname" text-anchor="start" >FSYNC</text>
+<rect x="49.39999999999999" y="1033" width="78.60000000000001" height="18" rx="3" class="lab_s"/>
+<text x="88.69999999999999" y="1046.5" class="lsb" text-anchor="middle" >FSYNC_ICM</text>
+<path d="M128,1064 L150,1064" class="w"/>
+<text x="146" y="1060" class="pn" text-anchor="end" >7</text>
+<text x="156" y="1068" class="pname" text-anchor="start" >RESV</text>
+<path d="M123,1059 L133,1069" class="nc"/>
+<path d="M123,1069 L133,1059" class="nc"/>
+<path d="M262,932 L284,932" class="pw"/>
+<text x="266" y="928" class="pn" text-anchor="start" >8</text>
+<text x="256" y="936" class="pname" text-anchor="end" >VDD</text>
+<rect x="284" y="923" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="304.8" y="936.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M262,954 L284,954" class="pw"/>
+<text x="266" y="950" class="pn" text-anchor="start" >5</text>
+<text x="256" y="958" class="pname" text-anchor="end" >VDDIO</text>
+<rect x="284" y="945" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="304.8" y="958.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M262,976 L284,976" class="w"/>
+<text x="266" y="972" class="pn" text-anchor="start" >6</text>
+<text x="256" y="980" class="pname" text-anchor="end" >GND</text>
+<path d="M284,976 L284,983" class="w"/>
+<path d="M275,983 L293,983" class="w"/>
+<path d="M278,987 L290,987" class="w"/>
+<path d="M281,991 L287,991" class="w"/>
+<path d="M262,998 L284,998" class="w"/>
+<text x="266" y="994" class="pn" text-anchor="start" >2</text>
+<text x="256" y="1002" class="pname" text-anchor="end" >RESV</text>
+<path d="M279,993 L289,1003" class="nc"/>
+<path d="M279,1003 L289,993" class="nc"/>
+<path d="M262,1020 L284,1020" class="w"/>
+<text x="266" y="1016" class="pn" text-anchor="start" >3</text>
+<text x="256" y="1024" class="pname" text-anchor="end" >RESV</text>
+<path d="M279,1015 L289,1025" class="nc"/>
+<path d="M279,1025 L289,1015" class="nc"/>
+<path d="M262,1042 L284,1042" class="w"/>
+<text x="266" y="1038" class="pn" text-anchor="start" >10</text>
+<text x="256" y="1046" class="pname" text-anchor="end" >RESV</text>
+<path d="M279,1037 L289,1047" class="nc"/>
+<path d="M279,1047 L289,1037" class="nc"/>
+<path d="M262,1064 L284,1064" class="w"/>
+<text x="266" y="1060" class="pn" text-anchor="start" >11</text>
+<text x="256" y="1068" class="pname" text-anchor="end" >RESV</text>
+<path d="M279,1059 L289,1069" class="nc"/>
+<path d="M279,1069 L289,1059" class="nc"/>
+<rect x="40" y="1085" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="60.8" y="1098.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M81.6,1094 L163.6,1094" class="pw"/>
+<circle cx="103.6" cy="1094" r="3.2" fill="#263238"/>
+<path d="M103.6,1094 L103.6,1106.0" class="w"/>
+<path d="M103.6,1112.0 L103.6,1124" class="w"/>
+<path d="M94.6,1106.0 L112.6,1106.0" class="plate"/>
+<path d="M94.6,1112.0 L112.6,1112.0" class="plate"/>
+<text x="115.6" y="1107.0" class="ref" text-anchor="start" >C5</text>
+<text x="115.6" y="1120.0" class="val" text-anchor="start" >100 nF</text>
+<path d="M103.6,1124 L103.6,1131" class="w"/>
+<path d="M94.6,1131 L112.6,1131" class="w"/>
+<path d="M97.6,1135 L109.6,1135" class="w"/>
+<path d="M100.6,1139 L106.6,1139" class="w"/>
+<text x="103.6" y="1158" class="ts" text-anchor="middle" font-size="9.5">U2.8</text>
+<path d="M163.6,1094 L163.6,1106.0" class="w"/>
+<path d="M163.6,1112.0 L163.6,1124" class="w"/>
+<path d="M154.6,1106.0 L172.6,1106.0" class="plate"/>
+<path d="M154.6,1112.0 L172.6,1112.0" class="plate"/>
+<text x="175.6" y="1107.0" class="ref" text-anchor="start" >C6</text>
+<text x="175.6" y="1120.0" class="val" text-anchor="start" >100 nF</text>
+<path d="M163.6,1124 L163.6,1131" class="w"/>
+<path d="M154.6,1131 L172.6,1131" class="w"/>
+<path d="M157.6,1135 L169.6,1135" class="w"/>
+<path d="M160.6,1139 L166.6,1139" class="w"/>
+<text x="163.6" y="1158" class="ts" text-anchor="middle" font-size="9.5">U2.5</text>
+<rect x="535" y="914" width="112" height="168" rx="3" class="sym"/>
+<text x="591.0" y="892" class="icref" text-anchor="middle" >U3</text>
+<text x="591.0" y="906" class="val" text-anchor="middle" >LSM6DSV320XTR · LGA-14L 2.5 × 3</text>
+<path d="M513,932 L535,932" class="sg"/>
+<text x="531" y="928" class="pn" text-anchor="end" >13</text>
+<text x="541" y="936" class="pname" text-anchor="start" >SCL/SPC</text>
+<rect x="478.8" y="923" width="34.2" height="18" rx="3" class="lab_s"/>
+<text x="495.90000000000003" y="936.5" class="lsb" text-anchor="middle" >SCK</text>
+<path d="M513,954 L535,954" class="sg"/>
+<text x="531" y="950" class="pn" text-anchor="end" >14</text>
+<text x="541" y="958" class="pname" text-anchor="start" >SDA/SDI</text>
+<rect x="449.2" y="945" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="481.09999999999997" y="958.5" class="lsb" text-anchor="middle" >SDI_DSV</text>
+<path d="M513,976 L535,976" class="sg"/>
+<text x="531" y="972" class="pn" text-anchor="end" >12</text>
+<text x="541" y="980" class="pname" text-anchor="start" >CS</text>
+<rect x="456.6" y="967" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="484.8" y="980.5" class="lsb" text-anchor="middle" >CS_DSV</text>
+<path d="M513,998 L535,998" class="sg"/>
+<text x="531" y="994" class="pn" text-anchor="end" >1</text>
+<text x="541" y="1002" class="pname" text-anchor="start" >SDO</text>
+<rect x="456.6" y="989" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="484.8" y="1002.5" class="lsb" text-anchor="middle" >MISO_B</text>
+<path d="M513,1020 L535,1020" class="sg"/>
+<text x="531" y="1016" class="pn" text-anchor="end" >4</text>
+<text x="541" y="1024" class="pname" text-anchor="start" >INT1</text>
+<rect x="449.2" y="1011" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="481.09999999999997" y="1024.5" class="lsb" text-anchor="middle" >INT_DSV</text>
+<path d="M513,1042 L535,1042" class="w"/>
+<text x="531" y="1038" class="pn" text-anchor="end" >9</text>
+<text x="541" y="1046" class="pname" text-anchor="start" >INT2</text>
+<path d="M508,1037 L518,1047" class="nc"/>
+<path d="M508,1047 L518,1037" class="nc"/>
+<path d="M513,1064 L535,1064" class="w"/>
+<text x="531" y="1060" class="pn" text-anchor="end" >10</text>
+<text x="541" y="1068" class="pname" text-anchor="start" >NC</text>
+<path d="M508,1059 L518,1069" class="nc"/>
+<path d="M508,1069 L518,1059" class="nc"/>
+<path d="M647,932 L669,932" class="pw"/>
+<text x="651" y="928" class="pn" text-anchor="start" >8</text>
+<text x="641" y="936" class="pname" text-anchor="end" >VDD</text>
+<rect x="669" y="923" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="689.8" y="936.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M647,954 L669,954" class="pw"/>
+<text x="651" y="950" class="pn" text-anchor="start" >5</text>
+<text x="641" y="958" class="pname" text-anchor="end" >VDDIO</text>
+<rect x="669" y="945" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="689.8" y="958.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M647,976 L669,976" class="w"/>
+<text x="651" y="972" class="pn" text-anchor="start" >6</text>
+<text x="641" y="980" class="pname" text-anchor="end" >GND</text>
+<path d="M669,976 L669,983" class="w"/>
+<path d="M660,983 L678,983" class="w"/>
+<path d="M663,987 L675,987" class="w"/>
+<path d="M666,991 L672,991" class="w"/>
+<path d="M647,998 L669,998" class="w"/>
+<text x="651" y="994" class="pn" text-anchor="start" >7</text>
+<text x="641" y="1002" class="pname" text-anchor="end" >GND</text>
+<path d="M669,998 L669,1005" class="w"/>
+<path d="M660,1005 L678,1005" class="w"/>
+<path d="M663,1009 L675,1009" class="w"/>
+<path d="M666,1013 L672,1013" class="w"/>
+<path d="M647,1020 L669,1020" class="w"/>
+<text x="651" y="1016" class="pn" text-anchor="start" >2</text>
+<text x="641" y="1024" class="pname" text-anchor="end" >SDx</text>
+<path d="M669,1020 L669,1027" class="w"/>
+<path d="M660,1027 L678,1027" class="w"/>
+<path d="M663,1031 L675,1031" class="w"/>
+<path d="M666,1035 L672,1035" class="w"/>
+<path d="M647,1042 L669,1042" class="w"/>
+<text x="651" y="1038" class="pn" text-anchor="start" >3</text>
+<text x="641" y="1046" class="pname" text-anchor="end" >SCx</text>
+<path d="M669,1042 L669,1049" class="w"/>
+<path d="M660,1049 L678,1049" class="w"/>
+<path d="M663,1053 L675,1053" class="w"/>
+<path d="M666,1057 L672,1057" class="w"/>
+<path d="M647,1064 L669,1064" class="w"/>
+<text x="651" y="1060" class="pn" text-anchor="start" >11</text>
+<text x="641" y="1068" class="pname" text-anchor="end" >NC</text>
+<path d="M664,1059 L674,1069" class="nc"/>
+<path d="M664,1069 L674,1059" class="nc"/>
+<rect x="425" y="1085" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="445.8" y="1098.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M466.6,1094 L548.6,1094" class="pw"/>
+<circle cx="488.6" cy="1094" r="3.2" fill="#263238"/>
+<path d="M488.6,1094 L488.6,1106.0" class="w"/>
+<path d="M488.6,1112.0 L488.6,1124" class="w"/>
+<path d="M479.6,1106.0 L497.6,1106.0" class="plate"/>
+<path d="M479.6,1112.0 L497.6,1112.0" class="plate"/>
+<text x="500.6" y="1107.0" class="ref" text-anchor="start" >C7</text>
+<text x="500.6" y="1120.0" class="val" text-anchor="start" >100 nF</text>
+<path d="M488.6,1124 L488.6,1131" class="w"/>
+<path d="M479.6,1131 L497.6,1131" class="w"/>
+<path d="M482.6,1135 L494.6,1135" class="w"/>
+<path d="M485.6,1139 L491.6,1139" class="w"/>
+<text x="488.6" y="1158" class="ts" text-anchor="middle" font-size="9.5">U3.8</text>
+<path d="M548.6,1094 L548.6,1106.0" class="w"/>
+<path d="M548.6,1112.0 L548.6,1124" class="w"/>
+<path d="M539.6,1106.0 L557.6,1106.0" class="plate"/>
+<path d="M539.6,1112.0 L557.6,1112.0" class="plate"/>
+<text x="560.6" y="1107.0" class="ref" text-anchor="start" >C8</text>
+<text x="560.6" y="1120.0" class="val" text-anchor="start" >100 nF</text>
+<path d="M548.6,1124 L548.6,1131" class="w"/>
+<path d="M539.6,1131 L557.6,1131" class="w"/>
+<path d="M542.6,1135 L554.6,1135" class="w"/>
+<path d="M545.6,1139 L551.6,1139" class="w"/>
+<text x="548.6" y="1158" class="ts" text-anchor="middle" font-size="9.5">U3.5</text>
+<rect x="920" y="914" width="112" height="168" rx="3" class="sym"/>
+<text x="976.0" y="892" class="icref" text-anchor="middle" >U4</text>
+<text x="976.0" y="906" class="val" text-anchor="middle" >ASM330LHHTR · LGA-14L 2.5 × 3</text>
+<path d="M898,932 L920,932" class="sg"/>
+<text x="916" y="928" class="pn" text-anchor="end" >13</text>
+<text x="926" y="936" class="pname" text-anchor="start" >SCL/SPC</text>
+<rect x="863.8" y="923" width="34.2" height="18" rx="3" class="lab_s"/>
+<text x="880.9" y="936.5" class="lsb" text-anchor="middle" >SCK</text>
+<path d="M898,954 L920,954" class="sg"/>
+<text x="916" y="950" class="pn" text-anchor="end" >14</text>
+<text x="926" y="958" class="pname" text-anchor="start" >SDA/SDI</text>
+<rect x="834.2" y="945" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="866.1" y="958.5" class="lsb" text-anchor="middle" >SDI_ASM</text>
+<path d="M898,976 L920,976" class="sg"/>
+<text x="916" y="972" class="pn" text-anchor="end" >12</text>
+<text x="926" y="980" class="pname" text-anchor="start" >CS</text>
+<rect x="841.6" y="967" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="869.8000000000001" y="980.5" class="lsb" text-anchor="middle" >CS_ASM</text>
+<path d="M898,998 L920,998" class="sg"/>
+<text x="916" y="994" class="pn" text-anchor="end" >1</text>
+<text x="926" y="1002" class="pname" text-anchor="start" >SDO</text>
+<rect x="841.6" y="989" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="869.8000000000001" y="1002.5" class="lsb" text-anchor="middle" >MISO_B</text>
+<path d="M898,1020 L920,1020" class="sg"/>
+<text x="916" y="1016" class="pn" text-anchor="end" >4</text>
+<text x="926" y="1024" class="pname" text-anchor="start" >INT1</text>
+<rect x="834.2" y="1011" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="866.1" y="1024.5" class="lsb" text-anchor="middle" >INT_ASM</text>
+<path d="M898,1042 L920,1042" class="w"/>
+<text x="916" y="1038" class="pn" text-anchor="end" >9</text>
+<text x="926" y="1046" class="pname" text-anchor="start" >INT2</text>
+<path d="M893,1037 L903,1047" class="nc"/>
+<path d="M893,1047 L903,1037" class="nc"/>
+<path d="M898,1064 L920,1064" class="w"/>
+<text x="916" y="1060" class="pn" text-anchor="end" >10</text>
+<text x="926" y="1068" class="pname" text-anchor="start" >NC</text>
+<path d="M893,1059 L903,1069" class="nc"/>
+<path d="M893,1069 L903,1059" class="nc"/>
+<path d="M1032,932 L1054,932" class="pw"/>
+<text x="1036" y="928" class="pn" text-anchor="start" >8</text>
+<text x="1026" y="936" class="pname" text-anchor="end" >VDD</text>
+<rect x="1054" y="923" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="1074.8" y="936.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M1032,954 L1054,954" class="pw"/>
+<text x="1036" y="950" class="pn" text-anchor="start" >5</text>
+<text x="1026" y="958" class="pname" text-anchor="end" >VDD_IO</text>
+<rect x="1054" y="945" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="1074.8" y="958.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M1032,976 L1054,976" class="w"/>
+<text x="1036" y="972" class="pn" text-anchor="start" >6</text>
+<text x="1026" y="980" class="pname" text-anchor="end" >GND</text>
+<path d="M1054,976 L1054,983" class="w"/>
+<path d="M1045,983 L1063,983" class="w"/>
+<path d="M1048,987 L1060,987" class="w"/>
+<path d="M1051,991 L1057,991" class="w"/>
+<path d="M1032,998 L1054,998" class="w"/>
+<text x="1036" y="994" class="pn" text-anchor="start" >7</text>
+<text x="1026" y="1002" class="pname" text-anchor="end" >GND</text>
+<path d="M1054,998 L1054,1005" class="w"/>
+<path d="M1045,1005 L1063,1005" class="w"/>
+<path d="M1048,1009 L1060,1009" class="w"/>
+<path d="M1051,1013 L1057,1013" class="w"/>
+<path d="M1032,1020 L1054,1020" class="w"/>
+<text x="1036" y="1016" class="pn" text-anchor="start" >2</text>
+<text x="1026" y="1024" class="pname" text-anchor="end" >RES</text>
+<path d="M1054,1020 L1054,1027" class="w"/>
+<path d="M1045,1027 L1063,1027" class="w"/>
+<path d="M1048,1031 L1060,1031" class="w"/>
+<path d="M1051,1035 L1057,1035" class="w"/>
+<path d="M1032,1042 L1054,1042" class="w"/>
+<text x="1036" y="1038" class="pn" text-anchor="start" >3</text>
+<text x="1026" y="1046" class="pname" text-anchor="end" >RES</text>
+<path d="M1054,1042 L1054,1049" class="w"/>
+<path d="M1045,1049 L1063,1049" class="w"/>
+<path d="M1048,1053 L1060,1053" class="w"/>
+<path d="M1051,1057 L1057,1057" class="w"/>
+<path d="M1032,1064 L1054,1064" class="w"/>
+<text x="1036" y="1060" class="pn" text-anchor="start" >11</text>
+<text x="1026" y="1068" class="pname" text-anchor="end" >NC</text>
+<path d="M1049,1059 L1059,1069" class="nc"/>
+<path d="M1049,1069 L1059,1059" class="nc"/>
+<rect x="810" y="1085" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="830.8" y="1098.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M851.6,1094 L993.6,1094" class="pw"/>
+<circle cx="873.6" cy="1094" r="3.2" fill="#263238"/>
+<path d="M873.6,1094 L873.6,1106.0" class="w"/>
+<path d="M873.6,1112.0 L873.6,1124" class="w"/>
+<path d="M864.6,1106.0 L882.6,1106.0" class="plate"/>
+<path d="M864.6,1112.0 L882.6,1112.0" class="plate"/>
+<text x="885.6" y="1107.0" class="ref" text-anchor="start" >C9</text>
+<text x="885.6" y="1120.0" class="val" text-anchor="start" >100 nF</text>
+<path d="M873.6,1124 L873.6,1131" class="w"/>
+<path d="M864.6,1131 L882.6,1131" class="w"/>
+<path d="M867.6,1135 L879.6,1135" class="w"/>
+<path d="M870.6,1139 L876.6,1139" class="w"/>
+<text x="873.6" y="1158" class="ts" text-anchor="middle" font-size="9.5">U4.8</text>
+<circle cx="933.6" cy="1094" r="3.2" fill="#263238"/>
+<path d="M933.6,1094 L933.6,1106.0" class="w"/>
+<path d="M933.6,1112.0 L933.6,1124" class="w"/>
+<path d="M924.6,1106.0 L942.6,1106.0" class="plate"/>
+<path d="M924.6,1112.0 L942.6,1112.0" class="plate"/>
+<text x="945.6" y="1107.0" class="ref" text-anchor="start" >C10</text>
+<text x="945.6" y="1120.0" class="val" text-anchor="start" >10 µF</text>
+<path d="M933.6,1124 L933.6,1131" class="w"/>
+<path d="M924.6,1131 L942.6,1131" class="w"/>
+<path d="M927.6,1135 L939.6,1135" class="w"/>
+<path d="M930.6,1139 L936.6,1139" class="w"/>
+<text x="933.6" y="1158" class="ts" text-anchor="middle" font-size="9.5">U4.8</text>
+<path d="M993.6,1094 L993.6,1106.0" class="w"/>
+<path d="M993.6,1112.0 L993.6,1124" class="w"/>
+<path d="M984.6,1106.0 L1002.6,1106.0" class="plate"/>
+<path d="M984.6,1112.0 L1002.6,1112.0" class="plate"/>
+<text x="1005.6" y="1107.0" class="ref" text-anchor="start" >C11</text>
+<text x="1005.6" y="1120.0" class="val" text-anchor="start" >100 nF</text>
+<path d="M993.6,1124 L993.6,1131" class="w"/>
+<path d="M984.6,1131 L1002.6,1131" class="w"/>
+<path d="M987.6,1135 L999.6,1135" class="w"/>
+<path d="M990.6,1139 L996.6,1139" class="w"/>
+<text x="993.6" y="1158" class="ts" text-anchor="middle" font-size="9.5">U4.5</text>
+<rect x="1305" y="914" width="112" height="168" rx="3" class="sym"/>
+<text x="1361.0" y="892" class="icref" text-anchor="middle" >U5</text>
+<text x="1361.0" y="906" class="val" text-anchor="middle" >ADXL375BCCZ · LGA-14 3 × 5</text>
+<path d="M1283,932 L1305,932" class="sg"/>
+<text x="1301" y="928" class="pn" text-anchor="end" >14</text>
+<text x="1311" y="936" class="pname" text-anchor="start" >SCLK</text>
+<rect x="1248.8" y="923" width="34.2" height="18" rx="3" class="lab_s"/>
+<text x="1265.8999999999999" y="936.5" class="lsb" text-anchor="middle" >SCK</text>
+<path d="M1283,954 L1305,954" class="sg"/>
+<text x="1301" y="950" class="pn" text-anchor="end" >13</text>
+<text x="1311" y="958" class="pname" text-anchor="start" >SDI</text>
+<rect x="1211.8" y="945" width="71.2" height="18" rx="3" class="lab_s"/>
+<text x="1247.3999999999999" y="958.5" class="lsb" text-anchor="middle" >SDI_ADXL</text>
+<path d="M1283,976 L1305,976" class="sg"/>
+<text x="1301" y="972" class="pn" text-anchor="end" >7</text>
+<text x="1311" y="980" class="pname" text-anchor="start" >CS</text>
+<rect x="1219.2" y="967" width="63.800000000000004" height="18" rx="3" class="lab_s"/>
+<text x="1251.1000000000001" y="980.5" class="lsb" text-anchor="middle" >CS_ADXL</text>
+<path d="M1283,998 L1305,998" class="sg"/>
+<text x="1301" y="994" class="pn" text-anchor="end" >12</text>
+<text x="1311" y="1002" class="pname" text-anchor="start" >SDO</text>
+<rect x="1226.6" y="989" width="56.400000000000006" height="18" rx="3" class="lab_s"/>
+<text x="1254.8" y="1002.5" class="lsb" text-anchor="middle" >MISO_B</text>
+<path d="M1283,1020 L1305,1020" class="sg"/>
+<text x="1301" y="1016" class="pn" text-anchor="end" >8</text>
+<text x="1311" y="1024" class="pname" text-anchor="start" >INT1</text>
+<rect x="1211.8" y="1011" width="71.2" height="18" rx="3" class="lab_s"/>
+<text x="1247.3999999999999" y="1024.5" class="lsb" text-anchor="middle" >INT_ADXL</text>
+<path d="M1283,1042 L1305,1042" class="w"/>
+<text x="1301" y="1038" class="pn" text-anchor="end" >9</text>
+<text x="1311" y="1046" class="pname" text-anchor="start" >INT2</text>
+<path d="M1278,1037 L1288,1047" class="nc"/>
+<path d="M1278,1047 L1288,1037" class="nc"/>
+<path d="M1283,1064 L1305,1064" class="w"/>
+<text x="1301" y="1060" class="pn" text-anchor="end" >10</text>
+<text x="1311" y="1068" class="pname" text-anchor="start" >NC</text>
+<path d="M1278,1059 L1288,1069" class="nc"/>
+<path d="M1278,1069 L1288,1059" class="nc"/>
+<path d="M1417,932 L1439,932" class="pw"/>
+<text x="1421" y="928" class="pn" text-anchor="start" >6</text>
+<text x="1411" y="936" class="pname" text-anchor="end" >VS</text>
+<rect x="1439" y="923" width="63.800000000000004" height="18" rx="3" class="lab_p"/>
+<text x="1470.9" y="936.5" class="lp" text-anchor="middle" >VS_ADXL</text>
+<path d="M1417,954 L1439,954" class="pw"/>
+<text x="1421" y="950" class="pn" text-anchor="start" >1</text>
+<text x="1411" y="958" class="pname" text-anchor="end" >VDD_IO</text>
+<rect x="1439" y="945" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="1459.8" y="958.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M1417,976 L1439,976" class="w"/>
+<text x="1421" y="972" class="pn" text-anchor="start" >2</text>
+<text x="1411" y="980" class="pname" text-anchor="end" >GND</text>
+<path d="M1439,976 L1439,983" class="w"/>
+<path d="M1430,983 L1448,983" class="w"/>
+<path d="M1433,987 L1445,987" class="w"/>
+<path d="M1436,991 L1442,991" class="w"/>
+<path d="M1417,998 L1439,998" class="w"/>
+<text x="1421" y="994" class="pn" text-anchor="start" >4</text>
+<text x="1411" y="1002" class="pname" text-anchor="end" >GND</text>
+<path d="M1439,998 L1439,1005" class="w"/>
+<path d="M1430,1005 L1448,1005" class="w"/>
+<path d="M1433,1009 L1445,1009" class="w"/>
+<path d="M1436,1013 L1442,1013" class="w"/>
+<path d="M1417,1020 L1439,1020" class="w"/>
+<text x="1421" y="1016" class="pn" text-anchor="start" >5</text>
+<text x="1411" y="1024" class="pname" text-anchor="end" >GND</text>
+<path d="M1439,1020 L1439,1027" class="w"/>
+<path d="M1430,1027 L1448,1027" class="w"/>
+<path d="M1433,1031 L1445,1031" class="w"/>
+<path d="M1436,1035 L1442,1035" class="w"/>
+<path d="M1417,1042 L1439,1042" class="w"/>
+<text x="1421" y="1038" class="pn" text-anchor="start" >11</text>
+<text x="1411" y="1046" class="pname" text-anchor="end" >RES</text>
+<path d="M1439,1042 L1439,1049" class="w"/>
+<path d="M1430,1049 L1448,1049" class="w"/>
+<path d="M1433,1053 L1445,1053" class="w"/>
+<path d="M1436,1057 L1442,1057" class="w"/>
+<path d="M1417,1064 L1439,1064" class="w"/>
+<text x="1421" y="1060" class="pn" text-anchor="start" >3</text>
+<text x="1411" y="1068" class="pname" text-anchor="end" >RES</text>
+<path d="M1434,1059 L1444,1069" class="nc"/>
+<path d="M1434,1069 L1444,1059" class="nc"/>
+<rect x="1195" y="1085" width="63.800000000000004" height="18" rx="3" class="lab_p"/>
+<text x="1226.9" y="1098.5" class="lp" text-anchor="middle" >VS_ADXL</text>
+<path d="M1258.8,1094 L1280.8,1094" class="pw"/>
+<path d="M1280.8,1094 L1280.8,1106.0" class="w"/>
+<path d="M1280.8,1112.0 L1280.8,1124" class="w"/>
+<path d="M1271.8,1106.0 L1289.8,1106.0" class="plate"/>
+<path d="M1271.8,1112.0 L1289.8,1112.0" class="plate"/>
+<text x="1292.8" y="1107.0" class="ref" text-anchor="start" >C12</text>
+<text x="1292.8" y="1120.0" class="val" text-anchor="start" >1 µF</text>
+<path d="M1280.8,1124 L1280.8,1131" class="w"/>
+<path d="M1271.8,1131 L1289.8,1131" class="w"/>
+<path d="M1274.8,1135 L1286.8,1135" class="w"/>
+<path d="M1277.8,1139 L1283.8,1139" class="w"/>
+<text x="1280.8" y="1158" class="ts" text-anchor="middle" font-size="9.5">U5.6</text>
+<rect x="1153.4" y="1180" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="1174.2" y="1193.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M1195,1189 L1220.0,1189" class="pw"/>
+<path d="M1246.0,1189 L1271,1189" class="pw"/>
+<rect x="1220.0" y="1184" width="26" height="10" class="sym"/>
+<text x="1233.0" y="1180" class="ref" text-anchor="middle" >R3 0 Ω</text>
+<rect x="1271" y="1180" width="63.800000000000004" height="18" rx="3" class="lab_p"/>
+<text x="1302.9" y="1193.5" class="lp" text-anchor="middle" >VS_ADXL</text>
+<rect x="1330" y="1085" width="41.6" height="18" rx="3" class="lab_p"/>
+<text x="1350.8" y="1098.5" class="lp" text-anchor="middle" >+3V3</text>
+<path d="M1371.6,1094 L1393.6,1094" class="pw"/>
+<path d="M1393.6,1094 L1393.6,1106.0" class="w"/>
+<path d="M1393.6,1112.0 L1393.6,1124" class="w"/>
+<path d="M1384.6,1106.0 L1402.6,1106.0" class="plate"/>
+<path d="M1384.6,1112.0 L1402.6,1112.0" class="plate"/>
+<text x="1405.6" y="1107.0" class="ref" text-anchor="start" >C13</text>
+<text x="1405.6" y="1120.0" class="val" text-anchor="start" >100 nF</text>
+<path d="M1393.6,1124 L1393.6,1131" class="w"/>
+<path d="M1384.6,1131 L1402.6,1131" class="w"/>
+<path d="M1387.6,1135 L1399.6,1135" class="w"/>
+<path d="M1390.6,1139 L1396.6,1139" class="w"/>
+<text x="1393.6" y="1158" class="ts" text-anchor="middle" font-size="9.5">U5.1</text>
+<rect x="20" y="1229" width="770" height="300" rx="7" class="frame"/>
+<text x="32" y="1249" class="ft" text-anchor="start" >E · FIRMWARE AND ASSEMBLY</text>
+<text x="40" y="1273" class="ts" text-anchor="start" >· SPI mode 3 for all four (the ADXL375 requires it; ST and TDK support it).</text>
+<text x="40" y="1292" class="ts" text-anchor="start" >  Clock limits: ADXL375 2–5 MHz (≥ 2 MHz for 1600 and 3200 Hz) · ST ≤ 10 MHz · ICM ≤ 24 MHz.</text>
+<text x="40" y="1311" class="ts" text-anchor="start" >  All at 5 MHz: ~115 KB/s of data = ~20 % of the bus.</text>
+<text x="40" y="1330" class="ts" text-anchor="start" >· At start-up: I2C_I3C_disable = 1 (U3, IF_CFG 03h) · I2C_disable = 1 (U4, CTRL4_C 13h) ·</text>
+<text x="40" y="1349" class="ts" text-anchor="start" >  turn off the internal pull-up on AP_SDO in U2 (Table 10).</text>
+<text x="40" y="1368" class="ts" text-anchor="start" >· The ADXL375 comes from AliExpress, and its DEVID (0xE5) is the same as the ADXL345's.</text>
+<text x="40" y="1387" class="ts" text-anchor="start" >  At rest, 1 g ≈ 20 LSB (49 mg/LSB); ~256 LSB means a relabelled ADXL345.</text>
+<text x="40" y="1406" class="ts" text-anchor="start" >· INT_* to TIM2 CH1–CH4 (32-bit input capture): a time stamp for every FIFO batch (block G).</text>
+<text x="40" y="1425" class="ts" text-anchor="start" >· Axes: each IMU is rotated on the PCB so that X, Y and Z match (U5 at −90°),</text>
+<text x="40" y="1444" class="ts" text-anchor="start" >  and the axes are marked on the silkscreen (ICM §11.1, ST Fig. 1, ADXL Fig. 3).</text>
+<text x="40" y="1463" class="ts" text-anchor="start" >· ADXL375 VS: if it needs filtering, use a ferrite bead in place of R3, not a resistor (VS ≥ VDD_IO).</text>
+<text x="40" y="1482" class="ts" text-anchor="start" >· Soldering (TN0018 §3.3–3.4): 0.12 mm steel stencil, apertures at 70–90 % of the pad;</text>
+<text x="40" y="1501" class="ts" text-anchor="start" >  no solder on the sides of the LGA packages; cool down at ≤ 3 °C/s.</text>
+<rect x="805" y="1229" width="775" height="300" rx="7" class="frame"/>
+<text x="817" y="1249" class="ft" text-anchor="start" >F · WHAT WE MEASURE</text>
+<text x="825" y="1273" class="ts" text-anchor="start" >On the bench:</text>
+<text x="825" y="1292" class="ts" text-anchor="start" >1. All four respond: WHO_AM_I / DEVID, plus the relabelled-ADXL345 check.</text>
+<text x="825" y="1311" class="ts" text-anchor="start" >2. Noise at rest of each one against its datasheet (density, offset, drift with temperature).</text>
+<text x="825" y="1330" class="ts" text-anchor="start" >3. Rubber-mallet hits: the ICM (±32 g) cross-checks the LSM6DSV320X high-g channel</text>
+<text x="825" y="1349" class="ts" text-anchor="start" >   between 16 and 32 g; the ADXL375 (±200 g) covers everything above.</text>
+<text x="825" y="1368" class="ts" text-anchor="start" >On the bike (Yamaha YZ 125):</text>
+<text x="825" y="1387" class="ts" text-anchor="start" >4. Real peaks: do they go past 16 g? Past 32 g? Does any sensor saturate?</text>
+<text x="825" y="1406" class="ts" text-anchor="start" >5. Engine vibration: spectrum from each sensor and gyro drift under vibration</text>
+<text x="825" y="1425" class="ts" text-anchor="start" >   (rectification). TDK advertises vibration rejection; ST gives no figure.</text>
+<text x="825" y="1444" class="ts" text-anchor="start" >6. Board temperature, from the internal sensor of all four.</text>
+<text x="825" y="1463" class="ts" text-anchor="start" >7. Timing: FIFO batches time-stamped by INT against the MCU counter.</text>
+<text x="825" y="1482" class="ts" text-anchor="start" >The result decides: LSM6DSV320X alone, ICM-45686 alone, or one of them + ADXL375.</text>
+<rect x="20" y="1544" width="830" height="400" rx="7" class="frame"/>
+<text x="32" y="1564" class="ft" text-anchor="start" >G · J1 → NUCLEO-U5A5ZJ-Q THROUGH THE ZIO CONNECTORS (UM2861 TABLES 15, 16, 18) · MORPHO HEADERS NOT FITTED</text>
+<text x="32" y="1588" class="th" text-anchor="start" >J1</text>
+<text x="120" y="1588" class="th" text-anchor="start" >Net</text>
+<text x="230" y="1588" class="th" text-anchor="start" >Nucleo</text>
+<text x="420" y="1588" class="th" text-anchor="start" >Pin</text>
+<text x="490" y="1588" class="th" text-anchor="start" >Function</text>
+<path d="M30,1594 L840,1594" class="thin"/>
+<text x="32" y="1612.0" class="tdm" text-anchor="start" >1</text>
+<text x="120" y="1612.0" class="tdm" text-anchor="start" >+5V_IN</text>
+<text x="230" y="1612.0" class="tdm" text-anchor="start" >CN8-9</text>
+<text x="420" y="1612.0" class="tdm" text-anchor="start" >5V</text>
+<text x="490" y="1612.0" class="td" text-anchor="start" >Nucleo 5 V output</text>
+<rect x="28" y="1617.5" width="814" height="18.5" fill="#f1f5f9"/>
+<text x="32" y="1630.5" class="tdm" text-anchor="start" >2 · 4 · 7</text>
+<text x="120" y="1630.5" class="tdm" text-anchor="start" >GND</text>
+<text x="230" y="1630.5" class="tdm" text-anchor="start" >CN8-11 · CN7-8 · CN8-13</text>
+<text x="420" y="1630.5" class="tdm" text-anchor="start" >GND</text>
+<text x="490" y="1630.5" class="td" text-anchor="start" ></text>
+<text x="32" y="1649.0" class="tdm" text-anchor="start" >3</text>
+<text x="120" y="1649.0" class="tdm" text-anchor="start" >SCK</text>
+<text x="230" y="1649.0" class="tdm" text-anchor="start" >CN7-10 (D13)</text>
+<text x="420" y="1649.0" class="tdm" text-anchor="start" >PA5</text>
+<text x="490" y="1649.0" class="td" text-anchor="start" >SPI1_SCK · LD1 is on PC7 by default (SB21)</text>
+<rect x="28" y="1654.5" width="814" height="18.5" fill="#f1f5f9"/>
+<text x="32" y="1667.5" class="tdm" text-anchor="start" >5</text>
+<text x="120" y="1667.5" class="tdm" text-anchor="start" >MOSI</text>
+<text x="230" y="1667.5" class="tdm" text-anchor="start" >CN7-14 (D11)</text>
+<text x="420" y="1667.5" class="tdm" text-anchor="start" >PA7</text>
+<text x="490" y="1667.5" class="td" text-anchor="start" >SPI1_MOSI</text>
+<text x="32" y="1686.0" class="tdm" text-anchor="start" >6</text>
+<text x="120" y="1686.0" class="tdm" text-anchor="start" >MISO</text>
+<text x="230" y="1686.0" class="tdm" text-anchor="start" >CN7-12 (D12)</text>
+<text x="420" y="1686.0" class="tdm" text-anchor="start" >PA6</text>
+<text x="490" y="1686.0" class="td" text-anchor="start" >SPI1_MISO</text>
+<rect x="28" y="1691.5" width="814" height="18.5" fill="#f1f5f9"/>
+<text x="32" y="1704.5" class="tdm" text-anchor="start" >8</text>
+<text x="120" y="1704.5" class="tdm" text-anchor="start" >CS_ICM</text>
+<text x="230" y="1704.5" class="tdm" text-anchor="start" >CN7-16 (D10)</text>
+<text x="420" y="1704.5" class="tdm" text-anchor="start" >PD14</text>
+<text x="490" y="1704.5" class="td" text-anchor="start" >GPIO</text>
+<text x="32" y="1723.0" class="tdm" text-anchor="start" >9</text>
+<text x="120" y="1723.0" class="tdm" text-anchor="start" >CS_DSV</text>
+<text x="230" y="1723.0" class="tdm" text-anchor="start" >CN7-18 (D9)</text>
+<text x="420" y="1723.0" class="tdm" text-anchor="start" >PD15</text>
+<text x="490" y="1723.0" class="td" text-anchor="start" >GPIO</text>
+<rect x="28" y="1728.5" width="814" height="18.5" fill="#f1f5f9"/>
+<text x="32" y="1741.5" class="tdm" text-anchor="start" >10</text>
+<text x="120" y="1741.5" class="tdm" text-anchor="start" >CS_ASM</text>
+<text x="230" y="1741.5" class="tdm" text-anchor="start" >CN7-20 (D8)</text>
+<text x="420" y="1741.5" class="tdm" text-anchor="start" >PF12</text>
+<text x="490" y="1741.5" class="td" text-anchor="start" >GPIO</text>
+<text x="32" y="1760.0" class="tdm" text-anchor="start" >11</text>
+<text x="120" y="1760.0" class="tdm" text-anchor="start" >CS_ADXL</text>
+<text x="230" y="1760.0" class="tdm" text-anchor="start" >CN10-2 (D7)</text>
+<text x="420" y="1760.0" class="tdm" text-anchor="start" >PF13</text>
+<text x="490" y="1760.0" class="td" text-anchor="start" >GPIO</text>
+<rect x="28" y="1765.5" width="814" height="18.5" fill="#f1f5f9"/>
+<text x="32" y="1778.5" class="tdm" text-anchor="start" >12</text>
+<text x="120" y="1778.5" class="tdm" text-anchor="start" >INT_ICM</text>
+<text x="230" y="1778.5" class="tdm" text-anchor="start" >CN10-29 (D32)</text>
+<text x="420" y="1778.5" class="tdm" text-anchor="start" >PA0</text>
+<text x="490" y="1778.5" class="td" text-anchor="start" >TIM2_CH1 · SB60 ON by default (not the button)</text>
+<text x="32" y="1797.0" class="tdm" text-anchor="start" >13</text>
+<text x="120" y="1797.0" class="tdm" text-anchor="start" >INT_DSV</text>
+<text x="230" y="1797.0" class="tdm" text-anchor="start" >CN10-11 (A8)</text>
+<text x="420" y="1797.0" class="tdm" text-anchor="start" >PA1</text>
+<text x="490" y="1797.0" class="td" text-anchor="start" >TIM2_CH2 (DS13543) · uses up analog input A8</text>
+<rect x="28" y="1802.5" width="814" height="18.5" fill="#f1f5f9"/>
+<text x="32" y="1815.5" class="tdm" text-anchor="start" >14</text>
+<text x="120" y="1815.5" class="tdm" text-anchor="start" >INT_ASM</text>
+<text x="230" y="1815.5" class="tdm" text-anchor="start" >CN10-32 (D36)</text>
+<text x="420" y="1815.5" class="tdm" text-anchor="start" >PB10</text>
+<text x="490" y="1815.5" class="td" text-anchor="start" >TIM2_CH3 · also on CN10-15: leave it free</text>
+<text x="32" y="1834.0" class="tdm" text-anchor="start" >15</text>
+<text x="120" y="1834.0" class="tdm" text-anchor="start" >INT_ADXL</text>
+<text x="230" y="1834.0" class="tdm" text-anchor="start" >CN10-34 (D35)</text>
+<text x="420" y="1834.0" class="tdm" text-anchor="start" >PB11</text>
+<text x="490" y="1834.0" class="td" text-anchor="start" >TIM2_CH4</text>
+<text x="32" y="1874" class="ts" text-anchor="start" >TIM2 is 32-bit: the four INTs are time-stamped by input capture, with no interrupt latency. The GNSS PPS goes to TIM5</text>
+<text x="32" y="1890" class="ts" text-anchor="start" >(also 32-bit), started together with TIM2. Still free: SDMMC1 (CN8), USART2 (CN9), FDCAN1 (PD0/PD1), A0–A5.</text>
+<rect x="865" y="1544" width="715" height="400" rx="7" class="frame"/>
+<text x="877" y="1564" class="ft" text-anchor="start" >H · BOARD LAYOUT FOR THE IMUs (ST TN0018 REV 8)</text>
+<text x="885" y="1588" class="ts" text-anchor="start" >· 54 × 50 mm, 1.6 mm, 4 layers: signals / GND / +3.3 V / signals.</text>
+<text x="885" y="1607" class="ts" text-anchor="start" >  All parts on the top side.</text>
+<text x="885" y="1626" class="ts" text-anchor="start" >· Under each IMU: no tracks, vias or copper pour on the top layer (§3.2, §3.9),</text>
+<text x="885" y="1645" class="ts" text-anchor="start" >  and pour keep-out areas on all four layers.</text>
+<text x="885" y="1664" class="ts" text-anchor="start" >· The four IMUs sit in a row in the middle of the board, between the four</text>
+<text x="885" y="1683" class="ts" text-anchor="start" >  M3 mounting holes, more than 8 mm from each hole (§3.2, §6.2, §6.3).</text>
+<text x="885" y="1702" class="ts" text-anchor="start" >· J1 is more than 20 mm from the IMUs, because the cable pulls there (§6.5).</text>
+<text x="885" y="1721" class="ts" text-anchor="start" >  Two Ø3 mm holes next to J1 take the cable tie.</text>
+<text x="885" y="1740" class="ts" text-anchor="start" >· The LDO (U1) is more than 9 mm from the IMUs: heat (§6.4).</text>
+<text x="885" y="1759" class="ts" text-anchor="start" >· Solder paste on the LGA pads reduced by a custom DRC rule (−0.025 mm</text>
+<text x="885" y="1778" class="ts" text-anchor="start" >  per side): 79 % of the pad on the 2.5 × 3 mm parts, 87 % on the ADXL375.</text>
+<text x="885" y="1797" class="ts" text-anchor="start" >· Pads: footprint pad = LGA pad + 0.1 mm; solder mask 0.1 mm larger,</text>
+<text x="885" y="1816" class="ts" text-anchor="start" >  outside the pad (§3.7).</text>
+<rect x="20" y="1959" width="1030" height="400" rx="7" class="frame"/>
+<text x="32" y="1979" class="ft" text-anchor="start" >PARTS</text>
+<text x="32" y="2003" class="th" text-anchor="start" >Ref.</text>
+<text x="190" y="2003" class="th" text-anchor="start" >Function</text>
+<text x="470" y="2003" class="th" text-anchor="start" >Part · package</text>
+<text x="760" y="2003" class="th" text-anchor="start" >Note</text>
+<path d="M30,2009 L1040,2009" class="thin"/>
+<text x="32" y="2027.0" class="tdm" text-anchor="start" >U2</text>
+<text x="190" y="2027.0" class="td" text-anchor="start" >IMU ±32 g, ±4000 °/s</text>
+<text x="470" y="2027.0" class="td" text-anchor="start" >TDK ICM-45686 · LGA-14 2.5 × 3</text>
+<text x="760" y="2027.0" class="td" text-anchor="start" >current choice</text>
+<rect x="28" y="2032.5" width="1014" height="18.5" fill="#f1f5f9"/>
+<text x="32" y="2045.5" class="tdm" text-anchor="start" >U3</text>
+<text x="190" y="2045.5" class="td" text-anchor="start" >IMU ±16 g + high-g channel ±320 g</text>
+<text x="470" y="2045.5" class="td" text-anchor="start" >ST LSM6DSV320XTR · LGA-14L</text>
+<text x="760" y="2045.5" class="td" text-anchor="start" >candidate</text>
+<text x="32" y="2064.0" class="tdm" text-anchor="start" >U4</text>
+<text x="190" y="2064.0" class="td" text-anchor="start" >IMU AEC-Q100, −40 to +105 °C</text>
+<text x="470" y="2064.0" class="td" text-anchor="start" >ST ASM330LHHTR · LGA-14L</text>
+<text x="760" y="2064.0" class="td" text-anchor="start" >backup if it gets hot</text>
+<rect x="28" y="2069.5" width="1014" height="18.5" fill="#f1f5f9"/>
+<text x="32" y="2082.5" class="tdm" text-anchor="start" >U5</text>
+<text x="190" y="2082.5" class="td" text-anchor="start" >accelerometer ±200 g</text>
+<text x="470" y="2082.5" class="td" text-anchor="start" >ADI ADXL375BCCZ · LGA-14 3 × 5</text>
+<text x="760" y="2082.5" class="td" text-anchor="start" >reference for peaks</text>
+<text x="32" y="2101.0" class="tdm" text-anchor="start" >U6–U9</text>
+<text x="190" y="2101.0" class="td" text-anchor="start" >single OR gate</text>
+<text x="470" y="2101.0" class="td" text-anchor="start" >TI SN74LVC1G32DBVR · SOT-23-5</text>
+<text x="760" y="2101.0" class="td" text-anchor="start" ></text>
+<rect x="28" y="2106.5" width="1014" height="18.5" fill="#f1f5f9"/>
+<text x="32" y="2119.5" class="tdm" text-anchor="start" >U1</text>
+<text x="190" y="2119.5" class="td" text-anchor="start" >LDO 3.3 V, 200 mA</text>
+<text x="470" y="2119.5" class="td" text-anchor="start" >Torex XC6206P332MR · SOT-23</text>
+<text x="760" y="2119.5" class="td" text-anchor="start" ></text>
+<text x="32" y="2138.0" class="tdm" text-anchor="start" >J1</text>
+<text x="190" y="2138.0" class="td" text-anchor="start" >male header 1×15, 2.54 mm</text>
+<text x="470" y="2138.0" class="td" text-anchor="start" ></text>
+<text x="760" y="2138.0" class="td" text-anchor="start" >not fitted on the bike board</text>
+<rect x="28" y="2143.5" width="1014" height="18.5" fill="#f1f5f9"/>
+<text x="32" y="2156.5" class="tdm" text-anchor="start" >FB1</text>
+<text x="190" y="2156.5" class="td" text-anchor="start" >ferrite bead 600 Ω @ 100 MHz, 1 A</text>
+<text x="470" y="2156.5" class="td" text-anchor="start" >FH CBW160808U601T · 0603</text>
+<text x="760" y="2156.5" class="td" text-anchor="start" ></text>
+<text x="32" y="2175.0" class="tdm" text-anchor="start" >RN1</text>
+<text x="190" y="2175.0" class="td" text-anchor="start" >resistor array 4 × 10 kΩ</text>
+<text x="470" y="2175.0" class="td" text-anchor="start" >YAGEO YC164-FR-0710KL</text>
+<text x="760" y="2175.0" class="td" text-anchor="start" ></text>
+<rect x="28" y="2180.5" width="1014" height="18.5" fill="#f1f5f9"/>
+<text x="32" y="2193.5" class="tdm" text-anchor="start" >C5–C9 C11 C13–C17</text>
+<text x="190" y="2193.5" class="td" text-anchor="start" >100 nF 50 V X7R ×11</text>
+<text x="470" y="2193.5" class="td" text-anchor="start" >0603</text>
+<text x="760" y="2193.5" class="td" text-anchor="start" ></text>
+<text x="32" y="2212.0" class="tdm" text-anchor="start" >C2 C3 C12</text>
+<text x="190" y="2212.0" class="td" text-anchor="start" >1 µF 25 V X7R</text>
+<text x="470" y="2212.0" class="td" text-anchor="start" >0603</text>
+<text x="760" y="2212.0" class="td" text-anchor="start" ></text>
+<rect x="28" y="2217.5" width="1014" height="18.5" fill="#f1f5f9"/>
+<text x="32" y="2230.5" class="tdm" text-anchor="start" >C1 C4 C10</text>
+<text x="190" y="2230.5" class="td" text-anchor="start" >10 µF 10 V X7R</text>
+<text x="470" y="2230.5" class="td" text-anchor="start" >0603</text>
+<text x="760" y="2230.5" class="td" text-anchor="start" ></text>
+<text x="32" y="2249.0" class="tdm" text-anchor="start" >R1 / R2 / R3</text>
+<text x="190" y="2249.0" class="td" text-anchor="start" >470 Ω / 33 Ω / 0 Ω</text>
+<text x="470" y="2249.0" class="td" text-anchor="start" >0603</text>
+<text x="760" y="2249.0" class="td" text-anchor="start" ></text>
+<rect x="28" y="2254.5" width="1014" height="18.5" fill="#f1f5f9"/>
+<text x="32" y="2267.5" class="tdm" text-anchor="start" >D1</text>
+<text x="190" y="2267.5" class="td" text-anchor="start" >green LED</text>
+<text x="470" y="2267.5" class="td" text-anchor="start" >0603</text>
+<text x="760" y="2267.5" class="td" text-anchor="start" ></text>
+<text x="32" y="2286.0" class="tdm" text-anchor="start" >TP1–TP3</text>
+<text x="190" y="2286.0" class="td" text-anchor="start" >test pads</text>
+<text x="470" y="2286.0" class="td" text-anchor="start" ></text>
+<text x="760" y="2286.0" class="td" text-anchor="start" ></text>
+<rect x="1065" y="1959" width="515" height="400" rx="7" class="framep"/>
+<text x="1077" y="1979" class="ft" text-anchor="start" >STATUS</text>
+<text x="1085" y="2003" class="ts" text-anchor="start" >· Schematic captured in KiCad 10: the netlist</text>
+<text x="1085" y="2022" class="ts" text-anchor="start" >  matches this diagram; ERC 0 errors.</text>
+<text x="1085" y="2041" class="ts" text-anchor="start" >· 4-layer PCB routed by hand; DRC 0 errors.</text>
+<text x="1085" y="2060" class="ts" text-anchor="start" >· PCB and stencil sponsored by PCBWay,</text>
+<text x="1085" y="2079" class="ts" text-anchor="start" >  in fabrication (November 2026).</text>
+<text x="1085" y="2098" class="ts" text-anchor="start" >· Next: hand assembly with the stencil, bench</text>
+<text x="1085" y="2117" class="ts" text-anchor="start" >  tests on the Nucleo, then the bike.</text>
+<text x="1085" y="2136" class="ts" text-anchor="start" ></text>
+<text x="1085" y="2155" class="ts" text-anchor="start" >AI MotoLogger is a data logger for a KTM 250 SX-F</text>
+<text x="1085" y="2174" class="ts" text-anchor="start" >motocross bike: IMU, dual-frequency GNSS,</text>
+<text x="1085" y="2193" class="ts" text-anchor="start" >suspension, brakes, wheel speeds, ECU (CAN, listen-</text>
+<text x="1085" y="2212" class="ts" text-anchor="start" >only) and wideband lambda, all on GNSS time.</text>
+<text x="1085" y="2231" class="ts" text-anchor="start" >This board picks its IMU.</text>
+<text x="30" y="2379" class="ts" text-anchor="start" >AI MotoLogger · IMU test board for bench and bike tests · not the final logger board</text>
+</svg>

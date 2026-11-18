@@ -1,0 +1,17 @@
+﻿Item #,Designator,Qty,Manufacturer,Mfg Part #,Description / Value,Package/Footprint,Type,Your Instructions / Notes
+1,U2,1,TDK InvenSense,ICM-45686,"6-axis IMU, accel ±32 g, gyro ±4000 dps, SPI","LGA-14 2.5x3.0x0.81 mm, 0.5 mm pitch",SMD,
+2,U3,1,STMicroelectronics,LSM6DSV320XTR,"6-axis IMU, accel ±16 g + high-g ±320 g, gyro ±4000 dps","LGA-14L 2.5x3.0x0.83 mm, 0.5 mm pitch",SMD,
+3,U4,1,STMicroelectronics,ASM330LHHTR,"6-axis IMU, AEC-Q100, -40 to +105 °C","LGA-14L 2.5x3.0x0.86 mm, 0.5 mm pitch",SMD,Customer may supply this part
+4,U5,1,Analog Devices,ADXL375BCCZ,3-axis accelerometer ±200 g,"LGA-14 3.0x5.0 mm, 0.8 mm pitch",SMD,Placed at 270° on purpose (axis alignment); customer may supply this part
+5,"U6,U7,U8,U9",4,Texas Instruments,SN74LVC1G32DBVR,Single 2-input OR gate,SOT-23-5,SMD,
+6,U1,1,Torex,XC6206P332MR,LDO regulator 3.3 V 200 mA,SOT-23-3,SMD,
+7,FB1,1,Fenghua (FH),CBW160808U601T,"Ferrite bead 600 Ω @ 100 MHz, 1 A",0603,SMD,Alternative: Murata BLM18KG601SN1D
+8,RN1,1,YAGEO,YC164-FR-0710KL,"Resistor array 4 x 10 kΩ 1%, convex",4x0603 (1206 array),SMD,
+9,"C5,C6,C7,C8,C9,C11,C13,C14,C15,C16,C17",11,Samsung,CL10B104KB8NNNC,Capacitor 100 nF 50 V X7R 10%,0603,SMD,Equivalent X7R accepted
+10,"C2,C3,C12",3,Samsung,CL10B105KA8NNNC,Capacitor 1 µF 25 V X7R 10%,0603,SMD,Equivalent X7R accepted
+11,"C1,C4,C10",3,Samsung,CL10A106KP8NNNC,Capacitor 10 µF 10 V X5R 10%,0603,SMD,X7R preferred if available
+12,R1,1,YAGEO,RC0603FR-07470RL,Resistor 470 Ω 1%,0603,SMD,Equivalent accepted
+13,R2,1,YAGEO,RC0603FR-0733RL,Resistor 33 Ω 1%,0603,SMD,Equivalent accepted
+14,R3,1,YAGEO,RC0603JR-070RL,Resistor 0 Ω jumper,0603,SMD,Equivalent accepted
+15,D1,1,Lite-On,LTST-C191KGKT,LED green,0603,SMD,Any green 0603 LED accepted
+16,J1,1,-,-,"Pin header 1x15, 2.54 mm",THT,THT,DO NOT POPULATE: soldered by the customer

@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "ai_motologger") (type "KiCad") (uri "${KIPRJMOD}/libs/ai_motologger.kicad_sym") (options "") (descr ""))
+)
