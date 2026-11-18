@@ -11,6 +11,8 @@ goes on the main logger board.
 
 *Concept illustration. The renders below show the actual board.*
 
+<a href="https://www.pcbway.com/project/shareproject/Multiple_IMU_Breakout_Board_b52e73b8.html"><img src="https://www.pcbway.com/project/img/images/frompcbway-1220.png" alt="PCB from PCBWay" /></a>
+
 | Bare board | Assembled board (3D render) |
 |:---:|:---:|
 | ![Bare PCB, top view](images/board-2d.jpg) | ![Assembled PCB, top view](images/board-3d.jpg) |
